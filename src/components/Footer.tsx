@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import logo from 'figma:asset/2ff0a5bb05216556268e3ecba7cbeeb09c99e6ba.png';
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl mb-4">Salford Engineering Consults</h3>
+            <img src={logo} alt="Salford" className="h-16 mb-4 brightness-0 invert" />
             <p className="text-white/70 mb-4">
               Your trusted partner for innovative engineering solutions and consulting services.
             </p>

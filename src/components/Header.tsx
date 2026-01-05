@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
+import logo from 'figma:asset/2ff0a5bb05216556268e3ecba7cbeeb09c99e6ba.png';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +18,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
           <div className="flex items-center">
-            <h1 className="text-[#003366] text-xl sm:text-2xl">Salford Engineering Consults</h1>
+            <img src={logo} alt="Salford Engineering Consults" className="h-12 md:h-16" />
           </div>
           
           {/* Desktop Navigation */}

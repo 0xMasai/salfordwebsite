@@ -1,4 +1,5 @@
 import { Award, Users, Target } from 'lucide-react';
+import teamImage from 'figma:asset/2d4208b771e6372a965995b53b3ae40ce5fa3496.png';
 
 const stats = [
   { number: '15+', label: 'Years Experience' },
@@ -44,8 +45,8 @@ export function About() {
           </div>
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1748346918817-0b1b6b2f9bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtfGVufDF8fHx8MTc2NTQ1OTY2MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Engineering team collaboration"
+              src={teamImage}
+              alt="Engineering team on site"
               className="rounded-lg shadow-lg w-full h-[400px] object-cover"
             />
           </div>
