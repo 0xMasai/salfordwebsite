@@ -1,37 +1,44 @@
-import { Compass, Cog, BarChart3, Building2, ShieldCheck, FileCheck } from 'lucide-react';
+import { Compass, Cog, BarChart3, Building2, ShieldCheck, FileCheck, PencilRuler, Calculator, Wrench } from 'lucide-react';
 
 const services = [
   {
-    icon: Compass,
-    title: 'Structural Engineering',
-    description: 'Comprehensive structural analysis and design solutions for commercial and residential projects.',
+    icon: Building2,
+    title: 'Construction',
+    description:
+      'Professional construction services delivering durable, safe, and high-quality residential and commercial projects.',
   },
   {
-    icon: Cog,
-    title: 'Mechanical Systems',
-    description: 'Advanced mechanical engineering services including HVAC, plumbing, and industrial systems design.',
+    icon: PencilRuler,
+    title: 'Drafting & Designing',
+    description:
+      'Accurate architectural and engineering drawings tailored to project specifications and regulatory standards.',
   },
   {
     icon: BarChart3,
     title: 'Project Management',
-    description: 'End-to-end project oversight ensuring timely delivery within budget and quality standards.',
+    description:
+      'Comprehensive project planning, coordination, and supervision to ensure timely and cost-effective delivery.',
   },
   {
-    icon: Building2,
-    title: 'Civil Engineering',
-    description: 'Infrastructure planning, site development, and transportation engineering expertise.',
+    icon: Calculator,
+    title: 'Cost Estimation',
+    description:
+      'Detailed cost analysis and budgeting to support informed decision-making and financial control.',
   },
   {
-    icon: ShieldCheck,
-    title: 'Safety Consulting',
-    description: 'Risk assessment, safety audits, and compliance consulting for industrial facilities.',
+    icon: Wrench,
+    title: 'Renovation & Maintenance',
+    description:
+      'Building renovation, upgrades, and routine maintenance to enhance functionality, safety, and value.',
   },
   {
-    icon: FileCheck,
-    title: 'Technical Documentation',
-    description: 'Detailed engineering reports, specifications, and as-built documentation services.',
+    icon: Compass,
+    title: 'Surveying',
+    description:
+      'Precise land and site surveying services to support planning, design, and construction accuracy.',
   },
 ];
+
 
 export function Services() {
   return (

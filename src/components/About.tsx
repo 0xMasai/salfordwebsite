@@ -1,5 +1,5 @@
 import { Award, Users, Target } from 'lucide-react';
-import teamImage from 'figma:asset/2d4208b771e6372a965995b53b3ae40ce5fa3496.png';
+import teamImage from '../assets/team.jpg';
 
 const stats = [
   { number: '15+', label: 'Years Experience' },

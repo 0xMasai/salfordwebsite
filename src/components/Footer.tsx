@@ -1,5 +1,5 @@
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
-import logo from 'figma:asset/2ff0a5bb05216556268e3ecba7cbeeb09c99e6ba.png';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, PhoneCall } from 'lucide-react';
+// import logo from '../assets/logo.jpeg';
 
 export function Footer() {
   return (
@@ -7,27 +7,34 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <img src={logo} alt="Salford" className="h-16 mb-4 brightness-0 invert" />
+            {/* <img src={logo} alt="Salford" className="h-16 mb-4 brightness-0 invert" /> */}
             <p className="text-white/70 mb-4">
               Your trusted partner for innovative engineering solutions and consulting services.
             </p>
             <div className="flex gap-4">
+             
+               {/* WhatsApp */}
               <a
-                href="#"
+                href="https://wa.me/256394857829"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-                aria-label="LinkedIn"
+                aria-label="WhatsApp"
               >
-                <Linkedin size={20} />
+                <PhoneCall size={20} className="text-white" />
               </a>
               <a
-                href="#"
+                href="https://x.com/SalfordInc"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
-                aria-label="Twitter"
+                aria-label="X (Twitter)"
               >
+
                 <Twitter size={20} />
               </a>
               <a
-                href="#"
+                href=""
                 className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="Facebook"
               >
@@ -67,15 +74,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-white/70">
                 <Phone size={16} />
-                <span>+1 (555) 123-4567</span>
+                <span>+256394857829</span>
               </li>
               <li className="flex items-center gap-2 text-white/70">
                 <Mail size={16} />
-                <span>info@salfordengineering.com</span>
+                <span>salfordinc00@gmail.com</span>
               </li>
               <li className="flex items-start gap-2 text-white/70">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 Engineering Way<br />Salford, Manchester M5 4WT</span>
+                <span>Span House<br />Nakasero, Kampala Road<br />Uganda</span>
               </li>
             </ul>
           </div>

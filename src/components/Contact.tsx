@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -10,11 +11,30 @@ export function Contact() {
   });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Form submission logic would go here
+  e.preventDefault();
+
+  // Send email via EmailJS
+  emailjs.send(
+    process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+    process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,   // Replace with your EmailJS template ID
+    
+    {
+      name: formData.name,
+
+      message: formData.message
+    },
+    process.env.REACT_APP_EMAILJS_PUBLIC_KEY!     // Replace with your EmailJS public key
+  )
+  .then((response) => {
+    console.log('SUCCESS!', response.status, response.text);
     alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+    setFormData({ name: '', email: '', phone: '', message: '' }); // Reset form
+  })
+  .catch((err) => {
+    console.error('FAILED...', err);
+    alert('Oops! Something went wrong. Please try again.');
+  });
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -44,7 +64,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-[#003366]/70">Phone</p>
-                    <p className="text-[#003366]">+1 (555) 123-4567</p>
+                    <p className="text-[#003366]">+256394857829</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -53,7 +73,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-[#003366]/70">Email</p>
-                    <p className="text-[#003366]">info@salfordengineering.com</p>
+                    <p className="text-[#003366]">salfordinc00@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -62,7 +82,7 @@ export function Contact() {
                   </div>
                   <div>
                     <p className="text-[#003366]/70">Address</p>
-                    <p className="text-[#003366]">123 Engineering Way<br />Salford, Manchester M5 4WT<br />United Kingdom</p>
+                    <p className="text-[#003366]">Span House<br />Nakasero, Kampala Road<br />Uganda</p>
                   </div>
                 </div>
               </div>
